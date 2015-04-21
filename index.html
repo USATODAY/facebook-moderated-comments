@@ -2,36 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+    <meta property="fb:app_id" content="1592868167636639" />
+
 <title>Facebook Moderated Comments</title>
 </head>
 
 <body>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1592868167636639',
-      xfbml      : true,
-      version    : 'v2.3'
-    });
-  };
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1592868167636639";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
+<div class="fb-comments" data-href="http://www.gannett-cdn.com/experiments/usatoday/2015/04/intheirwords-lgbt/index.html" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
 
 </body>
 </html>
