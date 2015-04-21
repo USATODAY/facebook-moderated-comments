@@ -11,6 +11,7 @@
 <body>
 
 <div id="fb-root"></div>
+<script src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/pym.min.js"></script>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -20,6 +21,20 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="fb-comments" data-href="http://www.gannett-cdn.com/experiments/usatoday/2015/04/intheirwords-lgbt/index.html" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+
+<script>
+window.fbAsyncInit = function() {
+
+    var pymChild = new pym.Child({ polling: 1000 });
+
+    function onLoadedComments() {
+        pymChild.sendHeight();
+    }
+
+    FB.Event.subscribe('xfbml.render', onLoadedComments);
+};
+
+</script>
 
 </body>
 </html>
